@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: PluginUpdateNotifierSettings
   m_EditorClassIdentifier: 
   showAtStartup: 1
-  skipVersion: 
+  skipVersion: 1.8.0
