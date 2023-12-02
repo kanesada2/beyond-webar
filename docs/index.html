@@ -13,7 +13,6 @@
     </script>
   </head>
   <body>
-    <button type="button" id="request_permission">iOSの人は押して下さい</button><br>
     <div class="webgl-content">
       <div id="unityContainer" style="width: 720px; height: 1280px"></div>
       <div class="footer">
@@ -22,17 +21,5 @@
         <div class="title">beyond</div>
       </div>
     </div>
-    <script type="text/javascript">
-      // ②ボタン押下時のアクションを追加
-            document.getElementById("request_permission").addEventListener("click", function(){
-              if (
-                DeviceOrientationEvent &&
-                DeviceOrientationEvent.requestPermission &&
-                typeof DeviceOrientationEvent.requestPermission === 'function'
-              ) {
-                DeviceOrientationEvent.requestPermission();
-              }
-            })
-      </script>
   </body>
 </html>
