@@ -1288,6 +1288,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TargetFSMs:
   - {fileID: 0}
+  - {fileID: 268984632749166446}
 --- !u!1001 &8296818166071599875
 PrefabInstance:
   m_ObjectHideFlags: 0

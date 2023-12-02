@@ -21,7 +21,7 @@ public class RotationManager : MonoBehaviour
     {
         if(rotations != null)
         {
-            this.transform.rotation = Quaternion.Euler(/*-1 * float.Parse(rotations[1]) + 90*/30.0f, -float.Parse(rotations[0]), 0.0f);
+            this.transform.rotation = Quaternion.Euler(-1 * float.Parse(rotations[1]) + 90, -float.Parse(rotations[0]), 0.0f);
         }
     }
 

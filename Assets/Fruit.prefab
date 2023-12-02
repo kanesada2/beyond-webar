@@ -268,6 +268,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TargetFSMs:
   - {fileID: 0}
+  - {fileID: 1816696444372015085}
 --- !u!114 &1816696444372015085
 MonoBehaviour:
   m_ObjectHideFlags: 0

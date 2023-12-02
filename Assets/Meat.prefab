@@ -1199,6 +1199,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TargetFSMs:
   - {fileID: 8798982494072124184, guid: c3ba7a67d85bc794e8b9b02c5cd4f468, type: 3}
+  - {fileID: 3076630069033407701}
 --- !u!1 &8253570818211194605
 GameObject:
   m_ObjectHideFlags: 0
