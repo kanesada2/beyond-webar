@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="ja-jp">
+<html lang="ja-jp" class="h-full">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>ジンセキコウゲントクサンヒンセンター</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
@@ -17,20 +18,20 @@
       var unityInstance = UnityLoader.instantiate("unityContainer", "Build/docs.json", {onProgress: UnityProgress});
     </script>
   </head>
-  <body>
-    <div class="flex justify-center">
-      <div class="w-full min-h-screen max-w-screen-xl text-slate-50" style="font-family: 'DotGothic16', sans-serif; background-image: linear-gradient(to top, #09203f 0%, #537895 100%);;" x-data="{ tab: 'notice'}" x-effect="if(tab=='game')unityInstance.SetFullscreen(1);">
-        <div class="flex flex-col min-h-screen p-4 overflow-scroll" x-show="tab == 'notice'">
+  <body class="h-full">
+    <div class="flex min-h-full justify-center">
+      <div class="w-full min-h-full max-w-screen-xl text-slate-50" style="font-family: 'DotGothic16', sans-serif; background-image: linear-gradient(to top, #09203f 0%, #537895 100%);;" x-data="{ tab: 'notice'}" x-effect="if(tab=='game')unityInstance.SetFullscreen(1);">
+        <div class="flex flex-col min-h-full p-4 overflow-scroll" x-show="tab == 'notice'">
           <main class="flex-grow">
-            <h1 class="text-5xl font-bold">ジンセキコウゲントクサンヒンセンター</h1>
-            <h2 class="mt-8 text-3xl">概要</h2>
+            <h1 class="text-3xl font-bold">ジンセキコウゲントクサンヒンセンター</h1>
+            <h2 class="mt-8 text-2xl">概要</h2>
             <div class="p-2">
               最近、全国で神石高原町が大ブームに！？<br>
               あなたの働く「神石高原特産品センター」では、今日も注文の電話が鳴りっぱなし。<br>
               倉庫番ロボットくんに指示を出して、注文された特産品を素早く的確に搬出口に届けよう！<br>
               未達成の注文が11個溜まるとゲームオーバー！
             </div>
-            <h2 class="text-3xl">注意事項</h2>
+            <h2 class="text-2xl">注意事項</h2>
             <ul>
               <li class="p-2">
                 <h3 class="text-xl">権限を許可！</h3>
@@ -69,24 +70,24 @@
           </main>
           <footer class="w-full flex justify-end">
             <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" @click="tab = 'tutorial'">
-              「あそびかた」へ &gt;
+              次へ &gt;
             </button>
           </footer>
         </div>
-        <div class="flex flex-col min-h-screen p-4 overflow-scroll" x-show="tab == 'tutorial'">
+        <div class="flex flex-col min-h-full p-4 overflow-scroll" x-show="tab == 'tutorial'">
           <main class="flex-grow">
-            <h2 class="text-3xl">あそびかた</h2>
+            <h2 class="text-2xl">あそびかた</h2>
           </main>
           <footer class="w-full flex justify-between">
             <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" @click="tab = 'notice'">
-              &lt; 「注意事項」へ
+              &lt; 前へ
             </button>
             <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" @click="tab = 'game'">
-              ゲームへ &gt;
+              次へ &gt;
             </button>
           </footer>
         </div>
-        <div class="flex flex-col min-h-screen p-4 overflow-scroll" x-show="tab == 'game'">
+        <div class="flex flex-col min-h-full p-4 overflow-scroll" x-show="tab == 'game'">
           <main class="flex-grow">
             <div class="webgl-content">
               <div id="unityContainer" style="width: 720px; height: 1280px"></div>
@@ -98,7 +99,7 @@
           </main>
           <footer class="w-full flex justify-start">
             <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" @click="tab = 'tutorial'">
-              &lt;「あそびかた」へ
+              &lt;前へ
             </button>
           </footer>
         </div>
