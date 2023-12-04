@@ -27,9 +27,19 @@ public class Webcam : MonoBehaviour
         {
             yield break;
         }
+        for (int i = 0; i < WebCamTexture.devices.Length; i++)
+        {
+            if (!WebCamTexture.devices[i].isFrontFacing)
+            {
+                m_webCamTexture = new WebCamTexture(WebCamTexture.devices[i].name, Screen.width, Screen.height);
+                break;
+            }
+        }
 
-        WebCamDevice userCameraDevice = WebCamTexture.devices[0];
-        m_webCamTexture = new WebCamTexture(userCameraDevice.name, Screen.width, Screen.height);
+        if (m_webCamTexture == null)
+        {
+            yield break;
+        }
 
         m_displayUI.texture = m_webCamTexture;
 
