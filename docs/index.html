@@ -3,9 +3,14 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | beyond</title>
+    <title>ジンセキコウゲントクサンヒンセンター</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
+    <link rel="stylesheet" href="./output.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js"></script>
     <script src="TemplateData/UnityProgress.js"></script>
     <script src="Build/UnityLoader.js"></script>
     <script>
@@ -13,15 +18,93 @@
     </script>
   </head>
   <body>
-    <button type="button" id="request_permission">iOSの人は押して下さい</button><br>
-    <div class="webgl-content">
-      <div id="unityContainer" style="width: 720px; height: 1280px"></div>
-      <div class="footer">
-        <div class="webgl-logo"></div>
-        <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
-        <div class="title">beyond</div>
+    <div class="flex justify-center">
+      <div class="w-full h-screen max-w-screen-xl text-slate-50" style="font-family: 'DotGothic16', sans-serif; background-image: linear-gradient(to top, #09203f 0%, #537895 100%);;" x-data="{ tab: 'notice'}" x-effect="if(tab=='game')unityInstance.SetFullscreen(1);">
+        <div class="flex flex-col min-h-screen p-4" x-show="tab == 'notice'">
+          <main class="flex-grow">
+            <h1 class="text-5xl font-bold">ジンセキコウゲントクサンヒンセンター</h1>
+            <h2 class="mt-8 text-3xl">概要</h2>
+            <div class="p-2">
+              最近、全国で神石高原町が大ブームに！？<br>
+              あなたの働く「神石高原特産品センター」では、今日も注文の電話が鳴りっぱなし。<br>
+              倉庫番ロボットくんに指示を出して、注文された特産品を素早く的確に搬出口に届けよう！<br>
+              未達成の注文が11個溜まるとゲームオーバー！
+            </div>
+            <h2 class="text-3xl">注意事項</h2>
+            <ul>
+              <li class="p-2">
+                <h3 class="text-xl">権限を許可！</h3>
+                <div class="p-2">
+                  iOS（iphone,ipad）でプレイする場合は、下のボタンを押して「許可」を選択してからプレイしてください。<br>
+                  ※Androidの場合は押しても何も起こりません
+                  <div class="p-2">
+                    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" id="request_permission">
+                      ここを押して「許可」
+                    </button>
+                  </div>
+                  
+                </div>
+              </li>
+              <li class="p-2">
+                <h3 class="text-xl">広いところで！</h3>
+                <div class="p-2">
+                  スマホやタブレットを構えたまま周りをくるくると見回して遊ぶゲームです。<br>
+                  プレイの際は、周囲の安全に気を付けながら十分なスペースのある場所で遊んでください。
+                </div>
+              </li>
+              <li class="p-2">
+                <h3 class="text-xl">タテ画面で！</h3>
+                <div class="p-2">
+                  スマホ、タブレットを必ずタテに向けた状態にしてプレイしてください（自動回転もオフにしておく方がいいかも？）
+                </div>
+              </li>
+              <li class="p-2">
+                <h3 class="text-xl">音が出ます！</h3>
+                <div class="p-2">
+                  音が出るゲームです。<br>
+                  効果音がプレイのヒントにもなるので、音量も適切に設定してプレイしてください。
+                </div>
+              </li>
+            </ul>
+          </main>
+          <footer class="w-full flex justify-end">
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" @click="tab = 'tutorial'">
+              「あそびかた」へ &gt;
+            </button>
+          </footer>
+        </div>
+        <div class="flex flex-col min-h-screen p-4" x-show="tab == 'tutorial'">
+          <main class="flex-grow">
+            <h2 class="text-3xl">あそびかた</h2>
+          </main>
+          <footer class="w-full flex justify-between">
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" @click="tab = 'notice'">
+              &lt; 「注意事項」へ
+            </button>
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" @click="tab = 'game'">
+              ゲームへ &gt;
+            </button>
+          </footer>
+        </div>
+        <div class="flex flex-col min-h-screen p-4" x-show="tab == 'game'">
+          <main class="flex-grow">
+            <div class="webgl-content">
+              <div id="unityContainer" style="width: 720px; height: 1280px"></div>
+              <div class="footer">
+                <div class="webgl-logo"></div>
+                <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
+              </div>
+            </div>
+          </main>
+          <footer class="w-full flex justify-start">
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" @click="tab = 'tutorial'">
+              &lt;「あそびかた」へ
+            </button>
+          </footer>
+        </div>
       </div>
     </div>
+    
     <script type="text/javascript">
       // ②ボタン押下時のアクションを追加
             document.getElementById("request_permission").addEventListener("click", function(){
