@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="ja-jp" style="height: -webkit-fill-available;">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -17,7 +17,7 @@
       var unityInstance = UnityLoader.instantiate("unityContainer", "Build/docs.json", {onProgress: UnityProgress});
     </script>
   </head>
-  <body>
+  <body style="min-height: -webkit-fill-available;">
     <div class="flex justify-center">
       <div class="w-full h-screen max-w-screen-xl text-slate-50" style="font-family: 'DotGothic16', sans-serif; background-image: linear-gradient(to top, #09203f 0%, #537895 100%);;" x-data="{ tab: 'notice'}" x-effect="if(tab=='game')unityInstance.SetFullscreen(1);">
         <div class="flex flex-col min-h-screen p-4" x-show="tab == 'notice'">
