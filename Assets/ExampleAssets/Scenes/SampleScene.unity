@@ -6842,7 +6842,7 @@ MonoBehaviour:
         tooltip: 
         showInInspector: 0
         networkSync: 0
-        value: 5
+        value: 6
       intVariables:
       - useVariable: 1
         name: tasksCount
