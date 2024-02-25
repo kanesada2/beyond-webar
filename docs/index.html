@@ -20,7 +20,7 @@
   </head>
   <body class="h-full">
     <div class="flex min-h-full justify-center">
-      <div class="w-full min-h-full max-w-screen-xl text-slate-50" style="font-family: 'DotGothic16', sans-serif; background-image: linear-gradient(to top, #09203f 0%, #537895 100%);;" x-data="{ tab: 'notice'}" x-effect="if(tab=='game')unityInstance.SetFullscreen(1);">
+      <div class="w-full min-h-full max-w-screen-xl text-slate-50 bg-gradient-to-b from-[#09203f] to-[#537895] font-retro" x-data="{ tab: 'notice'}" x-effect="if(tab=='game')unityInstance.SetFullscreen(1);">
         <div class="flex flex-col min-h-full p-4 overflow-scroll" x-show="tab == 'notice'">
           <main class="flex-grow">
             <h1 class="text-3xl font-bold">ジンセキコウゲントクサンヒンセンター</h1>
@@ -67,8 +67,9 @@
                 </div>
               </li>
             </ul>
+            <span class="font-bold">「次へ」を押して「あそびかた」へ！</span>
           </main>
-          <footer class="w-full flex justify-end">
+          <footer class="w-full flex justify-end mt-4">
             <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" @click="tab = 'tutorial'">
               次へ &gt;
             </button>
@@ -77,8 +78,70 @@
         <div class="flex flex-col min-h-full p-4 overflow-scroll" x-show="tab == 'tutorial'">
           <main class="flex-grow">
             <h2 class="text-2xl">あそびかた</h2>
+            <div class="">
+                <img class="mx-auto pt-2" src="img/demo0.png">
+                <div class="p-2">
+                    「ゲームスタート」を押すと、画面真ん中にいるロボットが左へ移動します。<br>
+                    ロボットが画面から出ていってしまわないよう、スマホやタブレットを動かして追いかけましょう！
+                </div>
+                <img class="mx-auto pt-2" src="img/demo1.png">
+                <div class="p-2">
+                    画面上にあるゲージ（画像の赤い囲み）に、<span class="font-bold">今入っている注文</span>が表示されます。<br>
+                    それぞれの色は、
+                    <ul class="font-bold">
+                        <li>赤→神石牛</li>
+                        <li>青→デニム</li>
+                        <li>紫→ぶどう</li>
+                        <li>茶→味噌</li>
+                    </ul>
+                    を表しています。<br>
+                    画面下にある丸いボタン（水色囲み）は操作ボタンです。<br>
+                    操作ボタンは、<span class="font-bold">短く一回タップするとロボットの進む向きが入れ替わります。</span><br>
+                    まずは左右に移動して、注文された特産品を集めに行きましょう！
+                </div>
+                 <img class="mx-auto pt-2" src="img/demo2.png">
+                 <div class="p-2">
+                    それぞれの特産品（画像内のものは神石牛）は、出現後一定時間が経つと回収できるようになります。<br>
+                    特産品アイテムの上に出ている緑のゲージが消えるのが目印です！
+                </div>
+                <img class="mx-auto pt-2" src="img/demo3.png">
+                <div class="p-2">
+                    アイテムにロボットが触れると、ロボットがアイテムを頭にのせて運び始めます。<br>
+                    アイテムを拾ったら、<span class="font-bold">ベルトコンベアのある出荷口</span>に運びましょう！
+                </div>
+                <img class="mx-auto pt-2" src="img/demo4.png">
+                <div class="p-2">
+                    出荷口（赤囲み）をロボットが通ると、運んでいるアイテムが出荷されます。<br>
+                    おめでとうございます！正しいアイテムを出荷できたのでスコアが増えました！<br>
+                    <span class="font-bold">
+                        ※間違ったアイテムを拾ってしまった場合も、この出荷口に持っていきましょう！<br>
+                        スコアは増えませんが、また他のアイテムを回収できるようになります。
+                    </span>
+                </div>
+                <img class="mx-auto pt-2" src="img/demo5.png">
+                <div class="p-2">
+                    画面下のボタンを長押しすると、ボタンの上の緑色のゲージが溜まっていきます。<br>
+                    ゲージが溜まったところでボタンを離すと、<span class="font-bold">溜まり具合に応じた高さのジャンプ</span>ができます。<br>
+                    高いところにあるアイテムを取る時や、目の前にあるアイテムを避けたい時に使いましょう！
+                </div>
+                <img class="mx-auto pt-2" src="img/demo6.png">
+                <div class="p-2">
+                    更に長くボタンを押しっぱなしにしていると、ゲージがいっぱいになって赤くなります。<br>
+                    この状態でボタンを離すと、<span class="font-bold">ロボットが大ジャンプ</span>します！<br>
+                    高速でステージの反対側まで飛ぶので、ハイスコアを目指すなら必須のテクニックです！
+                </div>
+                <img class="mx-auto pt-2" src="img/demo7.png">
+                <div class="p-2">
+                    画面上のゲージがいっぱいになってあふれてしまうとゲームオーバー。<br>
+                    「リトライ」ボタンから再挑戦もできます。<br>
+                    画面真ん中の特産品の説明も、スクロールして読んでみてね！<br>
+                </div>
+                <div class="p-2 font-bold">
+                    「次へ」を押すと、いよいよゲーム開始！
+                </div>
+            </div>
           </main>
-          <footer class="w-full flex justify-between">
+          <footer class="w-full flex justify-between mt-4">
             <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" @click="tab = 'notice'">
               &lt; 前へ
             </button>
@@ -97,8 +160,32 @@
               </div>
             </div>
           </main>
-          <footer class="w-full flex justify-start">
+          <footer class="w-full flex justify-between mt-4">
             <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" @click="tab = 'tutorial'">
+              &lt;前へ
+            </button>
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" @click="tab = 'credit'">
+              次へ &gt;
+            </button>
+          </footer>
+        </div>
+        <div class="flex flex-col min-h-full p-4 overflow-scroll" x-show="tab == 'credit'">
+          <main class="flex-grow">
+             <h2 class="text-2xl">クレジット</h2>
+             <h3 class="text-xl m-2">SE</h3>
+             <ul class="m-4">
+                <li><a target="blank" rel="noopener" href="https://soundeffect-lab.info/" class="underline">効果音ラボ</a></li>
+                <li><a target="blank" rel="noopener" href="https://otologic.jp/" class="underline">OtoLogic</a></li>
+                <li><a target="blank" rel="noopener" href="https://www.springin.org/" class="underline">Springin</a></li>
+                <li><a target="blank" rel="noopener" href="https://dova-s.jp/" class="underline">DOVA-SYNDROME</a></li>
+             </ul>
+             <h3 class="text-xl m-2">BGM</h3>
+             <ul class="m-4">
+                <li><a target="blank" rel="noopener" href="https://noiselessworld.net/"  class="underline">『ジェットペンギン2号』-騒音のない世界</a></li>
+             </ul>
+          </main>
+          <footer class="w-full flex justify-start mt-4">
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" @click="tab = 'game'">
               &lt;前へ
             </button>
           </footer>

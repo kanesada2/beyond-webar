@@ -2,6 +2,9 @@
 module.exports = {
   content: ["./*.{html,js}"],
   theme: {
+    fontFamily: {
+        'retro': ['DotGothic16'],
+    },
     extend: {
       height: {
         'screen': [
