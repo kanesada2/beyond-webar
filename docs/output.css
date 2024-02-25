@@ -547,16 +547,12 @@ video {
   margin-right: auto;
 }
 
-.mt-2 {
-  margin-top: 0.5rem;
+.mt-4 {
+  margin-top: 1rem;
 }
 
 .mt-8 {
   margin-top: 2rem;
-}
-
-.mt-4 {
-  margin-top: 1rem;
 }
 
 .flex {
@@ -567,12 +563,21 @@ video {
   height: 100%;
 }
 
+.h-screen {
+  height: 100vh;
+  height: 100dvh;
+}
+
 .min-h-full {
   min-height: 100%;
 }
 
 .w-full {
   width: 100%;
+}
+
+.w-screen {
+  width: 100vw;
 }
 
 .max-w-screen-xl {
