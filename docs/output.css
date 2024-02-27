@@ -568,6 +568,10 @@ video {
   height: 100dvh;
 }
 
+.h-4\/5 {
+  height: 80%;
+}
+
 .min-h-full {
   min-height: 100%;
 }
