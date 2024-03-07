@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: 6c154636a358e41b4bcc5d4158c4c529, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 0d77502b94dcd004b87a4f6440b06d70, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 1.003582, g: 0.44113117, b: 0.776372, a: 1}
+  m_IndirectSpecularColor: {r: 0.37531182, g: 0.8592819, b: 0.97872025, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5011,7 +5011,7 @@ MonoBehaviour:
       position:
         serializedVersion: 2
         x: 232
-        y: 238.96094
+        y: 242.95312
         width: 100
         height: 32
       isBreakpoint: 0
@@ -7154,7 +7154,7 @@ MonoBehaviour:
         boolValues: 
         stringValues: []
         vector4Values:
-        - {x: 0.6132076, y: 0.23652375, z: 0.18222678, w: 1}
+        - {x: 0.4245283, y: 0.23927692, z: 0.11414204, w: 1}
         - {x: 1, y: 0, z: 0, w: 1}
         - {x: 0, y: 0, z: 1, w: 1}
         - {x: 0.49803922, y: 0, z: 1, w: 1}
