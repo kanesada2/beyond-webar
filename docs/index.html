@@ -21,21 +21,12 @@
   <body class="h-full">
     <div class="flex min-h-full justify-center">
       <div class="w-full min-h-full max-w-screen-xl text-slate-50 bg-gradient-to-b from-[#09203f] to-[#537895] font-retro" x-data="{ tab: 'notice'}" x-effect="if(tab=='game')unityInstance.SetFullscreen(1);">
-        <div class="flex flex-col min-h-full p-4 overflow-scroll" x-show="tab == 'poster'">
-          <main class="flex-grow">
-            <div class="flex justify-center">
-              <img src="./img/poster.png" width="560">
-            </div>
-          </main>
-          <footer class="w-full flex justify-end mt-4">
-            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" @click="tab = 'notice'">
-              次へ &gt;
-            </button>
-          </footer>
-        </div>
         <div class="flex flex-col min-h-full p-4 overflow-scroll" x-show="tab == 'notice'">
           <main class="flex-grow">
             <h1 class="text-3xl font-bold">ジンセキコウゲントクサンヒンセンター</h1>
+            <div class="flex justify-center mt-8">
+              <img src="./img/poster.png" width="560">
+            </div>
             <h2 class="mt-8 text-2xl">概要</h2>
             <div class="p-2">
               最近、全国で神石高原町が大ブームに！？<br>
@@ -82,9 +73,6 @@
             <span class="font-bold">「次へ」を押して「あそびかた」へ！</span>
           </main>
           <footer class="w-full flex justify-end mt-4">
-            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" @click="tab = 'poster'">
-              &lt; 前へ
-            </button>
             <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" @click="tab = 'tutorial'">
               次へ &gt;
             </button>
@@ -93,8 +81,8 @@
         <div class="flex flex-col min-h-full p-4 overflow-scroll" x-show="tab == 'tutorial'">
           <main class="flex-grow">
             <h2 class="text-2xl">あそびかた</h2>
-            <div class="">
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/MAvMe4COmyg?si=kWZKA0bwM6JWuLuV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <div class="mt-8" style="position: relative;width: 100%;padding-top: 56.25%;">
+              <iframe style="position: absolute;top: 0;right: 0;width: 100%;height: 100%;" width="560" height="315" src="https://www.youtube.com/embed/MAvMe4COmyg?si=kWZKA0bwM6JWuLuV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
           </main>
           <footer class="w-full flex justify-between mt-4">
